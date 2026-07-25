@@ -19,6 +19,7 @@ const RUNTIMES = [
   { tool: "copilot", command: "copilot", displayName: "GitHub Copilot CLI" },
   { tool: "opencode", command: "opencode", displayName: "OpenCode" },
   { tool: "grok", command: "grok", displayName: "Grok Build" },
+  { tool: "pi", command: "pi", displayName: "Pi" },
 ] as const;
 
 export type RuntimeVersionRunner = (executable: string) => Promise<string>;

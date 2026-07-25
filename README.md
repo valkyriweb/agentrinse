@@ -63,6 +63,7 @@ logical memory records.
 | <img width="48px" src="docs/client-zed.svg" alt="Zed" />                    | [Zed](https://zed.dev/docs/ai/overview)                       | audit-only             | local agent state                                                   |
 | <img width="48px" src="docs/client-opencode.png" alt="OpenCode" />          | [OpenCode](https://opencode.ai/)                              | audit-only             | local agent state                                                   |
 | <img width="48px" src="docs/client-grok-build.svg" alt="Grok Build" />      | [Grok Build](https://docs.x.ai/build/overview)                | audit-only             | local agent state                                                   |
+| 🥧                                                                          | [Pi](https://github.com/earendil-works/pi)                    | audit-only             | sessions, snapshots, memory store, evidence, and logs               |
 
 ## cleanup surfaces
 

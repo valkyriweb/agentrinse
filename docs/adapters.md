@@ -14,6 +14,7 @@ recoverable whole-worktree action when every safety gate is proven.
 | Zed            | user-data root                                            | all             |
 | OpenCode       | database, logs, snapshots                                 | all             |
 | Grok Build     | version-gated data root                                   | all             |
+| Pi             | sessions, snapshots, memory, evidence, and logs           | all             |
 | Runtime        | opt-in selected executable and Claude native versions     | all             |
 | Git            | worktree audit and recoverable linked-worktree quarantine | conditional     |
 | Docker         | opt-in structured image/container inventory               | all             |
@@ -87,6 +88,14 @@ never runs Git garbage collection inside them.
 
 The storage contract is new and version-sensitive. Unknown versions degrade to
 directory-level size reporting.
+
+### Pi
+
+Pi keeps durable state under `~/.pi/agent`: JSONL session transcripts, session
+snapshots, the markdown memory store, evidence artifacts, and logs. All of it
+is report-only. Pi is intentionally absent from `providerMutationIdSchema`, so
+no Pi resource can produce a quarantine or delete action regardless of profile
+or `--max-risk`.
 
 ### Git
 

@@ -188,4 +188,41 @@ export const PROVIDER_SPECS: Record<ProviderAdapterId, ProviderSpec> = {
       },
     ],
   },
+  pi: {
+    id: "pi",
+    displayName: "Pi",
+    defaultRoot: homePath(".pi"),
+    resources: [
+      {
+        relativePath: join("agent", "sessions"),
+        displayName: "Pi sessions",
+        kind: "agent-session-store",
+      },
+      {
+        relativePath: join("agent", "session-snapshots"),
+        displayName: "Pi session snapshots",
+        kind: "agent-snapshot-store",
+      },
+      {
+        relativePath: join("agent", "memory"),
+        displayName: "Pi memory store",
+        kind: "agent-database",
+      },
+      {
+        relativePath: join("agent", "evidence"),
+        displayName: "Pi evidence artifacts",
+        kind: "agent-log-store",
+      },
+      {
+        relativePath: join("agent", "logs"),
+        displayName: "Pi logs",
+        kind: "agent-log-store",
+      },
+      {
+        relativePath: join("agent", "bash-bg"),
+        displayName: "Pi background job logs",
+        kind: "agent-log-store",
+      },
+    ],
+  },
 };

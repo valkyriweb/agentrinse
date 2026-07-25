@@ -26,7 +26,7 @@ describe("runAudit", () => {
 
     expect(report.schemaVersion).toBe(1);
     expect(report.startedAt).toBe("2026-07-23T01:02:03.000Z");
-    expect(report.probes).toHaveLength(7);
+    expect(report.probes).toHaveLength(8);
     expect(report.findings).toHaveLength(1);
     expect(report.findings[0]?.resource.adapter).toBe("copilot");
     expect(report.findings[0]?.state).toBe("protected");
